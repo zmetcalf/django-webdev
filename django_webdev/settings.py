@@ -27,7 +27,7 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), '../templates').replace('\\', '/'),
+    os.path.join(BASE_DIR, '../django-webdev','templates'),
 )
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'project_manager',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -85,5 +86,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(os.path.dirname(__file__), '../static').replace('\\', '/'),
+    os.path.join(BASE_DIR, 'static'),
 )
