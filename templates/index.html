@@ -1,7 +1,10 @@
-{% include 'header.html' %}
+{% include 'header.html' %}{% load project_tags %}
 </head>
 <body>
   <h1>Sample Project</h1>
   <h2>for fun</h2>
+  {% for project in project_list %}
+      <p>{{ project.project_name }} {{ project.sub_file_name }}</p>
+  {% endfor %}
 </body>
 </html>
