@@ -10,7 +10,7 @@ def project(request, project_id, sub_file_id):
 
 def project_list():
     project_list = get_list_or_404(ProjectList)
-    return {'project_list', project_list}
+    return {'project_list': project_list}
 
 def generate_stub(project, sub_file):
     stub_list = ['project_manager/']
