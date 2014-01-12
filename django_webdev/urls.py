@@ -6,6 +6,10 @@ from django_webdev import views
 
 admin.autodiscover()
 
+js_info_dict = {
+    'packages': ('project_manager',),
+}
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'django_webdev.views.home', name='home'),
@@ -15,4 +19,5 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
 
     url(r'^project/', include('project_manager.urls')),
+    (r'^jsi18n/$', 'django.views.i18n.javascript_catalog', js_info_dict),
 )
