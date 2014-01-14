@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'project_manager',
+    'bs_brochure_site',
 )
 
 MIDDLEWARE_CLASSES = (

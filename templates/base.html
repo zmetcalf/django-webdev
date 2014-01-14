@@ -1,0 +1,14 @@
+<!DOCTYPE html>{% load staticfiles %}
+<head>
+  <script data-main="{% static 'js/django-webdev.js' %}"
+    src="{% static 'js/require/require.js' %}">
+  </script>
+  {% block additional_scripts %}{% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <div id='content'>
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

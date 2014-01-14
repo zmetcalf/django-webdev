@@ -19,5 +19,6 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
 
     url(r'^project/', include('project_manager.urls')),
+    url(r'^brochure/', include('bs_brochure_site.urls')),
     (r'^jsi18n/$', 'django.views.i18n.javascript_catalog', js_info_dict),
 )

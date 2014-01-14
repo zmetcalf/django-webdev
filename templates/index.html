@@ -1,10 +1,9 @@
-{% include 'header.html' %}
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
   <h1>Sample Project</h1>
   <ul>Project List</ul>
   {% for project in project_list %}
       <li><a href="/project/{{ project.project_name }}/{{ project.sub_file_name }}/"</a>{{ project.sub_file_name }}</li>
   {% endfor %}
-</body>
-</html>
+{% endblock %}
