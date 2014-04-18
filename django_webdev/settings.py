@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'project_manager',
     'bs_brochure_site',
+    'backbone_ajax',
 )
 
 MIDDLEWARE_CLASSES = (
