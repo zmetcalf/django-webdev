@@ -1,11 +1,11 @@
-{% include 'header.html'%}
-<script>
-  require(['jsi18n-issue/js18'], function(ret) {console.log(ret);});
-</script>
-<script type='text/javascript' src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
-</head>
-<body>
+{% extends 'base.html' %}{% load staticfiles %}
+{% block require_script %}
+  {% static 'js/jsi18n-issue/js18' %}
+{% endblock %}
+{% block additional_scripts %}
+  <script type='text/javascript' src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
+{% endblock %}
+{% block content %}
   <h1>js i18n issue with django</h1>
   <div class='test-class'>Prechange Text</div>
-</body>
-</html>
+{% endblock %}

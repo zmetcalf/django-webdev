@@ -1,3 +1,18 @@
+requirejs.config({
+  paths: {
+    'jquery': '../lib/jquery',
+    'underscore': '../lib/underscore',
+  },
+
+  shim: {
+    'underscore': {
+      exports: '_'
+    },
+  },
+
+  waitSeconds: 200
+});
+
 define(['underscore'], function(_) {
-  return _.random(1, 10);
+  console.log(_.random(1, 10));
 });

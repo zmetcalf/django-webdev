@@ -1,13 +1,13 @@
-{% load staticfiles %}{% include 'header.html'%}
-<link href="{% static 'css/lib/jquery-ui.css' %}" rel="stylesheet"/>
-<script>
-  require(['js-setup/jquery-ui-setup'], function() {});
-</script>
-</head>
-<body>
+{% extends 'base.html' %}{% load staticfiles %}
+{% block additional_styles %}
+  <link href="{% static 'css/lib/jquery-ui.css' %}" rel="stylesheet"/>
+{% endblock %}
+{% block require_script %}
+  {% static 'js/js-setup/jquery-ui-setup' %}
+{% endblock %}
+{% block content %}
   <h1>JQuery UI</h1>
   <button>New Button</button>
   <input type="submit" value="A Submit Button">
   <a href="#">An Anchor</a>
-</body>
-</html>
+{% endblock %}

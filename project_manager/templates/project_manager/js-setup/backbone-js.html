@@ -1,9 +1,7 @@
-{% include 'header.html'%}
-<script>
-  require(['js-setup/backbone-setup'], function(ret) {console.log(ret);});
-</script>
-</head>
-<body>
+{% extends 'base.html' %}{% load staticfiles %}
+{% block require_script %}
+  {% static 'js/js-setup/backbone-setup' %}
+{% endblock %}
+{% block content %}
   <h1>Backbone</h1>
-</body>
-</html>
+{% endblock %}

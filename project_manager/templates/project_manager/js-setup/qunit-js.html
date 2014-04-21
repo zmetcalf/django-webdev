@@ -1,12 +1,12 @@
-{% load staticfiles %}{% include 'header.html'%}
-<link href="{% static 'css/lib/qunit.css' %}" rel="stylesheet"/>
-<script>
-  require(['js-setup/qunit-js-setup'], function() {});
-</script>
-</head>
-<body>
+{% extends 'base.html' %}{% load staticfiles %}
+{% block additional_styles %}
+  <link href="{% static 'css/lib/qunit.css' %}" rel="stylesheet"/>
+{% endblock %}
+{% block require_script %}
+  {% static 'js/js-setup/qunit-js-setup' %}
+{% endblock %}
+{% block content %}
   <h1>Q-Unit Tests</h1>
   <div id="qunit"></div>
   <div id="qunit-fixture"></div>
-</body>
-</html>
+{% endblock %}

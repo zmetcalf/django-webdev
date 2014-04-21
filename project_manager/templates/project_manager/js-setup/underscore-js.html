@@ -1,9 +1,7 @@
-{% include 'header.html'%}
-<script>
-  require(['js-setup/underscore-setup'], function(ret) {console.log(ret);});
-</script>
-</head>
-<body>
+{% extends 'base.html' %}{% load staticfiles %}
+{% block require_script %}
+  {% static 'js/js-setup/underscore-setup' %}
+{% endblock %}
+{% block content %}
   <h1>Underscore</h1>
-</body>
-</html>
+{% endblock %}
