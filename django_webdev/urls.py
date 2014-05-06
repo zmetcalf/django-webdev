@@ -21,5 +21,6 @@ urlpatterns = patterns('',
     url(r'^project/', include('project_manager.urls')),
     url(r'^brochure/', include('bs_brochure_site.urls')),
     url(r'^backbone_ajax/', include('backbone_ajax.urls')),
+    url(r'^bootstrap_modal/', include('bootstrap_modal.urls')),
     (r'^jsi18n/$', 'django.views.i18n.javascript_catalog', js_info_dict),
 )

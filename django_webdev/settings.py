@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'project_manager',
     'bs_brochure_site',
     'backbone_ajax',
+    'bootstrap_modal',
 )
 
 MIDDLEWARE_CLASSES = (
