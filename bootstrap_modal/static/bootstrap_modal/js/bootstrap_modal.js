@@ -1,6 +1,5 @@
 requirejs.config({
   paths: {
-    'jquery': '../../js/lib/jquery',
     'bootstrap': '../../js/lib/bootstrap',
   },
 
@@ -12,5 +11,5 @@ requirejs.config({
 });
 
 define(['jquery', 'bootstrap'], function($) {
-
+  $('#myModal').modal('show');
 });

@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="{% static 'bootstrap_modal/css/bootstrap.css' %}">
 {% endblock %}
 {% block require_script %}
-  {% static 'bootstrap_modal/js/bootstrap_modal' %}
+  {% static 'bootstrap_modal/js/require_config' %}
 {% endblock %}
 {% block content %}
 
@@ -29,5 +29,8 @@
     </div>
   </div>
 </div>
+<script>
+  requirejs(["{% static 'bootstrap_modal/js/bootstrap_modal.js' %}"]);
+</script>
 
 {% endblock %}
